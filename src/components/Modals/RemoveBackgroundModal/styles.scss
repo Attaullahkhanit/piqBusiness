@@ -1,0 +1,76 @@
+.remove-background-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  text-align: center;
+  font-family: Outfit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+
+  .modal-container {
+    background-color: white;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    .title {
+      color: black; /* Black text color */
+      font-size: 20px;
+      margin-bottom: 10px;
+      font-weight: 500;
+      font-family: Outfit;
+    }
+
+    .trash-icon
+    {
+      fill: #ec3f3f;
+      justify-content: center;
+    }
+
+    .subheading {
+      font-size: 18px;
+      color: var(--text-40, #a7a7a7);
+      font-weight: 400;
+      font-family: Outfit;
+    }
+
+    .options-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      .remove-option {
+        display: flex;
+        margin: 10px;
+
+        .remove-option-text {
+          color: black; /* Black text color */
+          font-size: 18px;
+          margin-bottom: 10px;
+
+          button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px;
+            width: 150px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background-color 0.2s ease-in-out;
+          }
+
+        }
+      }
+      }
+  }
+}

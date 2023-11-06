@@ -1,0 +1,74 @@
+@import "/src/styles/mixins.scss";
+
+.transaction-card {
+  padding: 20px 15px;
+  border-radius: 16px;
+  background: var(--foreground, #fff);
+  box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.06);
+  width: calc(100% - 50px);
+  @include flex(row, space-between, center);
+
+  .transaction-card-left {
+    @include flex(row, start, center, 15px);
+    .coin-icon {
+      // Icon styles
+    }
+
+    .transaction-details {
+      .transaction-title {
+        // Title styles
+        color: var(--text-100, #000);
+        font-family: Outfit;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+
+      .transaction-date {
+        // Date styles
+        color: var(--text-40, #a7a7a7);
+        text-align: left;
+        font-family: Outfit;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+
+  .transaction-card-right {
+    .transaction-amount {
+      // Amount styles
+      color: var(--green-100, #009e06);
+      text-align: right;
+      font-family: Outfit;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    .transaction-amount-red {
+      // Amount styles
+      color: var(--green-100, #c71602);
+      text-align: right;
+      font-family: Outfit;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    .transaction-type {
+      // Type Typography styles
+      color: var(--text-40, #a7a7a7);
+      text-align: right;
+      font-family: Outfit;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}

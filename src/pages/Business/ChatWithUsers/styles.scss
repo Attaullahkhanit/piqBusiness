@@ -1,0 +1,144 @@
+@import "/src/styles/mixins.scss";
+
+.chat-with-users-page {
+  height: calc(100vh - 80px);
+  overflow-y: hidden;
+  @include hideScrollbar();
+  z-index: 3;
+  .chat-container {
+    @include hideScrollbar();
+    height: auto;
+    background-color: white;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: scroll;
+    position: relative;
+    top: 40px;
+    bottom: 100px;
+    padding-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    .users-messages-list-container {
+      width: 100%;
+      height: calc(100vh - 150px);
+      border-radius: 16px;
+      border: 1px solid var(--Border, #dcdcdc);
+      background: var(--Foreground, #fff);
+      .list-items {
+        .list-title {
+          color: var(--text-100, #000);
+          font-family: Outfit;
+          font-size: 22px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          padding: 15px;
+        }
+        .items-container {
+          justify-content: baseline;
+          align-items: center;
+          padding-top: 8px;
+          padding-bottom: 5px;
+          cursor: pointer;
+          &:hover {
+            background-color: #f0f0f0;
+          }
+          .items {
+            align-items: center;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-left: 15px;
+            padding-right: 15px;
+            .left-area-item {
+              @include flex(row, center, start);
+              .profile-image {
+                img {
+                  width: 45px;
+                  height: 45px;
+                  border-radius: 50%;
+                }
+              }
+              .name-message {
+                padding-left: 15px;
+                padding-top: 3px;
+                .name {
+                  color: var(--text-100, #000);
+                  font-family: Outfit;
+                  font-size: 18px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                }
+                .reply {
+                  color: var(--text-100, #000);
+                  font-family: Outfit;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                }
+              }
+            }
+            .right-area-item {
+              justify-content: right;
+              align-items: right;
+              text-align: right;
+              .time {
+                color: var(--text-100, #000);
+                font-family: Outfit;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+              }
+            }
+          }
+        }
+        .items-bottom-hr {
+          width: 90%;
+          text-align: center;
+          border: 1px solid #ededed;
+        }
+      }
+    }
+    .user-chat-bot {
+      width: 500px;
+      height: calc(100vh - 150px);
+      flex-shrink: 0;
+      margin-left: 20px;
+      border-radius: 16px;
+      border: 1px solid var(--Border, #dcdcdc);
+      background: var(--Background, #fff);
+    }
+  }
+}
+.no-chats {
+  margin-top: 20px;
+  @include flex(column, center, center, 20px);
+  svg {
+    height: 40vh;
+  }
+  .no-chats-placeholder {
+    color: var(--text-100, #000);
+    font-family: Outfit;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.no-business-section{
+  display: flex;
+  .message{
+    width: 32%;
+    height: fit-content;
+    margin: auto;
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 35%;
+  }
+}

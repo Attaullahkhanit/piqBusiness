@@ -1,0 +1,88 @@
+@import "/src/styles/mixins.scss";
+
+.referral-qr-modal {
+  // Styles for the outer Modal component
+
+  .modal-content {
+    // Styles for the content container within the Modal
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 16px;
+    padding: 20px;
+    @include flex(column, center, center, 20px);
+
+    .qr-code-container {
+      // Styles for the container of the QR code
+      margin: 40px 0 10px 0;
+      .qr-code {
+        // Styles for the QR code image
+        width: 300px;
+      }
+    }
+
+    .options-container {
+      // Styles for the container of options
+
+      .link-option-container {
+        // Styles for the container of the referral link option
+        @include flex(column, start, center, 20px);
+        position: relative;
+        border-bottom: 1px solid var(--border-40, #e6e6e6);
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+
+        .link-option-text {
+          // Styles for the text "Referral Link"
+          color: var(--text-40, #a7a7a7);
+          font-family: Outfit;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+
+        .link-option-value {
+          // Styles for the container of the link value and copy icon
+          @include flex(row, start, center, 10px);
+
+          .link-option-value-text {
+            // Styles for the referral link value text
+            color: var(--text-100, #000);
+            text-align: center;
+            font-family: Outfit;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+
+          .copy-icon {
+            // Styles for the CopyIcon component
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+          }
+        }
+
+        .or-text {
+          // Styles for the "Or" text
+          position: absolute;
+          bottom: -15px;
+          background-color: white;
+          width: 50px;
+          text-align: center;
+        }
+      }
+
+      .button-container {
+        // Styles for the container of the Download QR Code button
+        @include flex(row, center, center);
+      }
+    }
+  }
+}

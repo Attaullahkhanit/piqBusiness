@@ -1,0 +1,99 @@
+@import "/src/styles/mixins.scss";
+.wallet-withdrawal {
+  // Styles for the wallet-withdrawal container
+  @include flex(row, center, start);
+  .withdrawal-content-area {
+    // Styles for the withdrawal-content-area container
+    width: 45%;
+    max-width: 500px;
+    padding: 30px 0;
+    .title {
+      // Styles for the title Typography
+      color: var(--text-100, #000);
+      font-family: Outfit;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      // Styles for the subtitle Typography
+      color: var(--text-40, #a7a7a7);
+      font-family: Outfit;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .withdrawal-form {
+      // Styles for the withdrawal-form container
+      @include flex(column, start, center, 20px);
+      margin-top: 20px;
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+      input {
+        // Styles for the input field
+        border: none;
+        height: 60px;
+        width: 150px;
+        outline: none;
+        font-family: Outfit;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 75px */
+        background: var(
+          --primary,
+          linear-gradient(168deg, #ffda46 0%, #ffae00 100%)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        &::placeholder {
+          font-family: Outfit;
+          font-size: 50px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 150%; /* 75px */
+          background: var(
+            --primary,
+            linear-gradient(168deg, #ffda46 0%, #ffae00 100%)
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      .balance-text {
+        // Styles for the balance-text Typography
+        color: var(--text-40, #a7a7a7);
+        text-align: center;
+        font-family: Outfit;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 30px */
+      }
+
+      .button-container {
+        // Styles for the button-container
+        .PrimaryButton {
+          // Styles for the PrimaryButton component
+        }
+      }
+    }
+  }
+}

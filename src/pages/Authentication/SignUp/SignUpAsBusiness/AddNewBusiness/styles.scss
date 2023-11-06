@@ -1,0 +1,88 @@
+@import "/src/styles/mixins.scss";
+
+.sign-up-as-business {
+  font-family: Outfit;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+
+  @include flex(row, center, start);
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  @include hideScrollbar();
+
+  .sign-up-content {
+    width: 45%;
+    max-width: 600px;
+  }
+
+  h1 {
+    .title-heading {
+      color: var(--text-100, #000);
+      font-family: Outfit;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      padding-left: 20px;
+    }
+  }
+
+  h2 {
+    .subheading
+    {
+      color: var(--text-40, #a7a7a7);
+      font-family: Outfit;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19.6px; /* 108.889% */
+    }
+    span
+    {
+      color: #ffae00;
+      cursor: pointer;
+    }
+  }
+
+  h3 {
+    color: var(--text-70, #6a6a6a);
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.6px; /* 108.889% */
+    margin-top: 20px;
+  }
+  .value-fields {
+    padding: 20px 0 40px 0;
+  }
+  .button-container {
+    @include flex(row, center, center);
+  }
+  .form-bottom-text {
+    color: var(--text-40, #a7a7a7);
+    text-align: center;
+    font-family: Outfit;
+    font-size: 16px;
+    padding-top: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    .form-bottom-text-span {
+      background: var(
+        --Primary,
+        linear-gradient(168deg, #ffda46 -110.09%, #ffae00 118.06%)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: Outfit;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration-line: underline;
+    }
+  }
+}

@@ -1,0 +1,131 @@
+@import '/src/styles/mixins.scss';
+
+
+.settings-page{
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    @include hideScrollbar();
+    z-index: 3;
+    .dash-section {
+        @include hideScrollbar();
+        height: auto;
+        background-color: white;
+        width: 45%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 1.4rem;
+        border: 0.1125rem solid #dcdcdc;
+        overflow-y: scroll;
+        position: relative;
+        top: 40px;
+        bottom: 100px;
+        .cards-section {
+          padding: 0.5625rem 1.125rem;
+        }
+        .singin-header-image{
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+        }
+        .food-Hallen-downHeader-icon {
+            float: auto;
+            height: 120px;
+            width: 120px;
+            margin-top: -49px;         
+            border-radius: 50%;
+        }
+        .food_hallen-img-sect{
+            float: left;
+            left: 40px;
+        }
+        .food-hallen-text{
+            font-size: 28px;
+            font-weight: 800;
+            padding-bottom: 10px;
+        }
+        .food-Hallen-downHeader{
+            display: flex;
+            flex-direction: row;
+            padding-left: 60px;
+            padding-bottom: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+          
+          .inline-list {
+            display: inline-block;
+            padding-right: 15px;
+            border-radius: 5px;
+          }
+          
+          .inline-list ul li {
+            display: inline;
+            margin-right: 10px;
+            padding-right: 10px;
+            font-size: 16px;
+          }
+    }
+    .dash-setting-text-section{
+        @include hideScrollbar();
+        height: auto;
+        width: 45%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        overflow-y: scroll;
+        position: relative;
+        top: 40px;
+        bottom: 100px;
+        font-size: 28px;
+    }
+    .dash-setting-text{
+        color: var(--text-40, #A7A7A7);
+        font-family: Outfit;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        padding-top: 20px;
+        padding-bottom: 10px
+        }
+    
+    .dash-setting-section{
+        @include hideScrollbar();
+        cursor: pointer;
+        position: relative;
+        z-index: 4;
+        box-sizing: border-box;
+        height: auto;
+        background-color: white;
+        width: 45%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 0.9rem;
+        overflow-y: scroll;
+        position: relative;
+        top: 40px;
+        bottom: 100px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        padding: 15px 10px;
+        margin-bottom: 50px;
+    }
+    .dash-setting-section-list-item{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding:10px 5px;
+        border-bottom: 1px solid #EDEDED;
+        z-index: 4;
+        cursor: pointer;
+    }
+    .dash-setting-lefarea{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;  
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}

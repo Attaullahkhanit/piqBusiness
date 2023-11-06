@@ -1,0 +1,179 @@
+@import "/src/styles/mixins.scss";
+
+.about-yourself-page {
+  font-family: Outfit;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+
+  @include flex(row, center, start);
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  @include hideScrollbar();
+  .add-details-content {
+    width: 45%;
+    max-width: 600px;
+    
+    .recaptcha-container {
+        @include flex(row, center, start);
+        .recaptcha{
+        padding-top: 30px;
+        padding-bottom: 30px
+        }
+      }
+  }
+  
+  h1 {
+    .title-heading {
+      color: var(--text-100, #000);
+      font-family: Outfit;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      padding-left: 20px;
+    }
+  }
+  h2 {
+    color: var(--text-40, #a7a7a7);
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.6px; /* 108.889% */
+    .signin-link {
+        font-family: Outfit;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration:underline !important;
+        background: var(--Primary-Gradient, linear-gradient(168deg, #FFDA46 -110.09%, #FFAE00 118.06%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+  }
+
+  h3 {
+    color: var(--text-70, #6a6a6a);
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.6px; /* 108.889% */
+    margin-top: 20px;
+  }
+
+  h4 {
+    color: var(--text-70, #6a6a6a);
+    font-family: Outfit;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.6px; /* 108.889% */
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .value-fields {
+    padding-top: 20px;
+    .input-field {
+      width: 550px;
+      height: 55px;
+      top: 415px;
+      left: 490px;
+      border-radius: 57px;
+      border: 1px solid #dcdcdc;
+      background: #fff;
+      padding-top: 20px;
+
+      //FONT STYLES
+      font-size: 16px;
+      color: var(--text-40, #a7a7a7);
+      font-family: Outfit;
+      font-style: normal;
+      font-weight: 400;
+
+      &::placeholder {
+        padding-left: 5%;
+        padding-bottom: 5%;
+      }
+    }
+    .MuiTextField-root {
+        display: -webkit-inline-box;
+        display: -webkit-inline-flex;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        position: relative;
+        min-width: 0;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        align-items: center;
+        vertical-align: top;
+        width: 100% !important;
+        max-height: 56px;
+        border-radius: 57px;
+        border-color: #fff !important;
+        outline: 0px !important;
+        background: var(--Foreground, #FFF);
+        width: 500px;
+        height: 44px;
+        flex-shrink: 0;
+    }
+    .MuiInputBase-root .MuiOutlinedInput-root .MuiInputBase-colorPrimary .MuiInputBase-fullWidth .MuiInputBase-formControl .MuiInputBase-adornedEnd .MuiAutocomplete-inputRoot .css-154xyx0-MuiInputBase-root-MuiOutlinedInput-root{
+        outline: none !important;
+        border: none !important;
+        &:hover{
+            outline: none !important;
+            border: none !important;
+        }
+    }
+    .about-yourself-page .add-details-content .css-wb57ya-MuiFormControl-root-MuiTextField-root:hover {
+        border-color: #fff !important;
+    }
+    .css-wb57ya-MuiFormControl-root-MuiTextField-root :hover {  
+        border-color: #fff !important;
+    }
+    .MuiAutocomplete-hasPopupIcon.css-1h51icj-MuiAutocomplete-root .MuiOutlinedInput-root, .MuiAutocomplete-hasClearIcon.css-1h51icj-MuiAutocomplete-root .MuiOutlinedInput-root {
+        border-radius: 56px;
+        height: 44px;
+        width: 100% !important;
+        padding-bottom: 20px;
+        border-color: #fff !important;
+    }
+    .css-1h51icj-MuiAutocomplete-root .MuiOutlinedInput-root .MuiAutocomplete-input {
+        padding: 0px 4px 10px 23px;
+        font-family: Outfit;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border-color: #fff !important;
+    }
+    .css-1h51icj-MuiAutocomplete-root .MuiAutocomplete-tag {
+        margin: -9px 2px 0px 2px;
+        max-width: calc(100% - 6px);
+        border-color: #fff !important;
+    }
+    .normal-select .MuiSelect-select {
+        padding: 10px 32px;
+        border-color: #fff !important;
+    }
+    .about-yourself-page .add-details-content .MuiAutocomplete-hasPopupIcon.css-1h51icj-MuiAutocomplete-root .MuiOutlinedInput-root, .about-yourself-page .add-details-content .MuiAutocomplete-hasClearIcon.css-1h51icj-MuiAutocomplete-root .MuiOutlinedInput-root:focus {
+        border-radius: 56px;
+        height: 44px;
+        width: 100% !important;
+        padding-bottom: 20px;
+        border-color: #fff !important;
+    }
+  }
+  .button-container {
+    margin-top: 20px;
+    @include flex(row, center, center);
+  }
+}

@@ -1,0 +1,120 @@
+.confirm-details-modal {
+  position: "absolute";
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-y: auto;
+  top: "50%";
+  transform: "translate(-50%, -50%)";
+  width: 100%;
+  background-color: "background.paper";
+  border: "2px solid #fff";
+  box-shadow: 24;
+  padding: 4px;
+
+  .modal-container {
+    box-sizing: border-box;
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aliceblue;
+    padding: 30px;
+    border-radius: 16px;
+    background: #fff;
+    .titles2 {
+      color: var(--text-100, #000);
+      font-family: Outfit;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    .subtitle2 {
+      color: var(--text-40, #a7a7a7);
+      font-family: Outfit;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+  .modal-textbox {
+    border-radius: 16px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: 1px solid var(--Border, #dcdcdc) !important;
+    background: var(--Foreground, #fff);
+    color: #000;
+  }
+  .terms-conditions-text {
+    color: var(--text-40, #a7a7a7);
+    text-align: center;
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  .terms-link-text {
+    color: var(--text-70, #6a6a6a);
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+  }
+
+  .submit-button-container {
+    color: var(--text-40, #a7a7a7);
+    text-align: center;
+    font-family: Outfit;
+    font-size: 16px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 250px;
+    height: 67px;
+    flex-shrink: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .back-button-container {
+    text-align: center;
+    font-family: Outfit;
+    cursor: pointer;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background: var(
+      --Primary,
+      linear-gradient(168deg, #ffda46 -110.09%, #ffae00 118.06%)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .terms-conditions-box {
+    box-sizing: border-box;
+    border-radius: 16px;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid var(--Border, #dcdcdc);
+    background: var(--Foreground, #fff);
+    .modal-term-text {
+      color: #a7a7a7;
+      width: 100%;
+      font-size: 14px;
+      height: 300px;
+      flex-shrink: 0;
+      overflow: auto;
+    }
+  }
+}

@@ -1,0 +1,184 @@
+@import "/src/styles/mixins.scss";
+
+.business-navbar {
+  @include flex(row, space-between, center);
+  width: calc(100% - 70px);
+  padding: 20px 35px;
+  background: #101014;
+  box-shadow: 0px 9px 12.6px 0px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  z-index: 5;
+  top: 0;
+
+  .left-area {
+    @include flex(row, start, center, 27px);
+    .logo-area {
+      img {
+        height: 40px;
+        cursor: pointer;
+      }
+    }
+
+    .menu-area {
+      @include flex(row, start, center, 27px);
+      .menu-item {
+        color: rgba(255, 255, 255, 0.63);
+        font-family: Outfit;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        @include hoverEffect();
+        cursor: pointer;
+      }
+      .menu-item-selected {
+        font-family: Outfit;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        background: var(
+          --primary,
+          linear-gradient(168deg, #ffda46 0%, #ffae00 100%)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @include hoverEffect();
+        cursor: pointer;
+      }
+    }
+  }
+
+  .right-area {
+    position: relative;
+    .links-area {
+      position: absolute;
+      right: 300px;
+      top: 50%;
+      transform: translateY(-50%);
+      @include flex(row, end, center, 25px);
+      .link-item {
+        cursor: pointer;
+      }
+    }
+    .links-area-full {
+      position: absolute;
+      right: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+      @include flex(row, end, center, 25px);
+      .link-item {
+        cursor: pointer;
+      }
+    }
+    .profile-area {
+      border-radius: 67.5px;
+      border: 0.9px solid #373737;
+      background: #212121;
+      padding: 9px 18px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      position: absolute;
+      right: 0;
+      top: -34.2px;
+      max-width: 262px;
+      // min-width: 200px;
+    }
+    .profile-area-opened {
+      border-radius: 18px;
+      border: 0.9px solid #373737;
+      background: #212121;
+      padding: 18px 18px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      position: absolute;
+      right: 0;
+      top: -34.2px;
+      width: 245px;
+      max-height: 400px;
+      overflow-y: scroll;
+      @include hideScrollbar();
+      @include flex(column, start, start, 18px);
+    }
+    .profile-card-container {
+      @include flex(row, space-between, center, 18px);
+      .arrow-down {
+        width: 15px;
+      }
+    }
+    .profile-card {
+      @include flex(row, start, center);
+      border-bottom: none;
+
+      .profile-image {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+      }
+      img {
+        width: 45px;
+      }
+      .profile-info {
+        margin: 0 18px 0 9px;
+        .profile-name {
+          color: #fff;
+          font-family: Outfit;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          letter-spacing: -0.3672px;
+          white-space: nowrap;
+        }
+        .profile-name-opened {
+          color: #fff;
+          font-family: Outfit;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          letter-spacing: -0.3672px;
+        }
+
+        .user-name {
+          color: rgba(255, 255, 255, 0.63);
+          font-family: Outfit;
+          font-size: 14.4px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: -0.3672px;
+        }
+      }
+
+      .arrow-down {
+        width: 9px;
+      }
+    }
+  }
+  .logout-area {
+    width: 170px;
+  }
+}
+
+.base-navbar {
+  @include flex(row, space-between, center);
+  width: 100%;
+  height: 80px;
+  box-sizing: border-box;
+  padding: 10px 35px;
+  background: #101014;
+  box-shadow: 0px 9px 12.6px 0px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  z-index: 5;
+  .logo-area {
+    img {
+      height: 40px;
+    }
+  }
+  .right-area {
+    width: 200px;
+  }
+}
+

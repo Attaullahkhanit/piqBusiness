@@ -1,0 +1,193 @@
+@import "/src/styles/mixins.scss";
+
+.wallet {
+  @include flex(row, center, start);
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  @include hideScrollbar();
+
+  .wallet-content-area {
+    position: relative;
+    z-index: 112;
+    width: 50%;
+    max-width: 600px;
+    padding: 20px;
+    .stripe-container {
+      width: 100%;
+      @include flex(column, center, center, 20px);
+      .stripe-svg {
+        height: 300px;
+        width: 300px;
+      }
+      .description {
+        color: var(--text-100, #000);
+        font-family: Outfit;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 20px;
+      }
+    }
+    .title {
+      color: var(--text-100, #000);
+      font-family: Outfit;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 20px;
+    }
+    .balance-card {
+      padding: 15px;
+      border-radius: 16px;
+      border: 1px solid var(--border, #dcdcdc);
+      background: var(--foreground, #fff);
+      @include flex(row, space-between, center);
+      .balance-area {
+        .balance-title {
+          color: var(--text-40, #a7a7a7);
+          font-family: Outfit;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%; /* 27px */
+        }
+
+        .balance-amount {
+          font-family: Outfit;
+          font-size: 40px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 150%; /* 60px */
+          background: var(
+            --primary,
+            linear-gradient(168deg, #ffda46 0%, #ffae00 100%)
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      .actions-area {
+        @include flex(row, end, center, 10px);
+        cursor: pointer;
+        .action {
+          @include flex(column, center, center, 10px);
+          padding: 10px;
+
+          .action-title {
+            // Styles for the action title Typography
+          }
+        }
+      }
+    }
+    .account-detail {
+      margin: 15px 0;
+      .title {
+        color: var(--text-70, #6a6a6a);
+        font-family: Outfit;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .detail-card {
+        @include flex(row, space-between, center);
+        padding: 10px 45px 10px 10px;
+        border-radius: 16px;
+        border: 1px solid var(--border, #dcdcdc);
+        background: var(--foreground, #fff);
+        .details-area {
+          @include flex(row, start, center, 10px);
+          .icon-container {
+            height: 90px;
+            width: 60px;
+            @include flex(row, center, center);
+            border-radius: 12px;
+            background: var(--text-100, #00000020);
+            .icon {
+              // Styles for the BankIcon
+            }
+          }
+
+          .detail-container {
+            .detail-title {
+              color: var(--text-100, #000);
+              font-family: Outfit;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 150%; /* 30px */
+            }
+          }
+        }
+
+        .actions-area {
+          .action-icon {
+            // Styles for the EditIcon
+          }
+        }
+      }
+    }
+    .transaction-details-area {
+      .title {
+        color: var(--text-70, #6a6a6a);
+        font-family: Outfit;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .tab-header-container {
+        // Styles for the tab-header-container
+        @include flex(row, start, end);
+        margin-bottom: 15px;
+        .tab-header {
+          width: 50%;
+          padding: 20px 0;
+          transition: all 0.4s ease-in-out;
+          text-align: center;
+          font-family: Outfit;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          color: var(--text-40, #a7a7a7);
+          border-bottom: 2px solid var(--border, #ededed);
+          background: none;
+          background-clip: none;
+          cursor: pointer;
+          &.active {
+            color: none;
+            border-bottom: 2px solid var(--primary, #ffda46);
+            background: var(
+              --primary,
+              linear-gradient(168deg, #ffda46 0%, #ffae00 100%)
+            );
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+      .transaction-list {
+        margin-top: 20px;
+        height: 300px;
+        overflow-y: auto;
+        @include flex(column, start, center, 10px);
+        width: 100%;
+      }
+
+      .search-container {
+        // Styles for the search container
+        .icon-input {
+          // Styles for the IconInput component
+        }
+      }
+    }
+  }
+}

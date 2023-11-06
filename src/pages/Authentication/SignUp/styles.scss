@@ -1,0 +1,77 @@
+@import "/src/styles/mixins.scss";
+
+.sign-up-as-business {
+  @include flex(row, center, start);
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  @include hideScrollbar();
+
+  .sign-up-content {
+    width: 45%;
+    max-width: 500px;
+  }
+
+  h1 {
+    .title-heading {
+      color: var(--text-100, #000);
+      font-family: Outfit;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      padding-left: 20px;
+    }
+  }
+
+  h2 {
+    color: var(--text-40, #a7a7a7);
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.6px; /* 108.889% */
+  }
+
+  .box-container {
+    @include flex(row, start, center, 20px);
+    margin-top: 20px;
+
+    .box-left,
+    .box-right {
+      display: flex;
+      @include flex(column, center, center);
+      width: 100%;
+      height: 164px;
+      border-radius: 16px;
+      border: 1px solid #dcdcdc;
+      cursor: pointer;
+    }
+
+    .box-left:hover,
+    .box-right:hover,
+    .box-container:hover {
+      border-color: #ffae00;
+
+      color: #ffae00;
+      .box-title {
+        color: #ffae00;
+      }
+      .box-icon {
+        fill: #ffae00      }
+    }
+    .box-icon
+    {
+        fill: #a7a7a7;
+    }
+    .box-title {
+      color: var(--text-40, #a7a7a7);
+      font-family: Outfit;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19.6px; /* 108.889% */
+      text-align: center;
+      margin-top: 10px; /* Adjust the distance between icon and text */
+    }
+  }
+}

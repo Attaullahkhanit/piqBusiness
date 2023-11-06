@@ -1,0 +1,10 @@
+@import "/src/styles/mixins.scss";
+
+.business-video-immersive-view-page {
+  background-color: #0c0c0f;
+  @include flex(row, center, start);
+  .content-area {
+    width: 40%;
+    max-width: calc((100vh - 80px) * 9 / 16); 
+  }
+}

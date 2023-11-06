@@ -1,0 +1,39 @@
+@import '/src/styles/mixins.scss';
+
+.confirmation-page {
+  margin-top: 5%;
+  font-family: Outfit;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+
+  @include flex(row, center, center); /* Center the content both horizontally and vertically */
+  height: calc(100vh - 80px); /* Adjust the height calculation as needed */
+  overflow-y: auto;
+  @include hideScrollbar();
+
+  .confirmation-content {
+    width: 100%; /* Adjust the width as needed */
+    max-width: 600px;
+    text-align: center; /* Center the content */
+  }
+
+  h1.title-heading {
+    color: var(--text-100, #000);
+    font-family: Outfit;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 20px; /* Add margin for spacing */
+  }
+
+  .check-mark {
+    @include flex(row, center, center);
+    width: 100%;
+    .checkmark-image {
+      /* Add any styles for the checkmark image if needed */
+    }
+  }
+}

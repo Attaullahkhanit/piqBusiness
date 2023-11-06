@@ -1,0 +1,181 @@
+@import "/src/styles/mixins.scss";
+
+.forgot-password-page {
+  @include flex(row, center, start);
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  @include hideScrollbar();
+  .forgot-password-container {
+    position: relative;
+    z-index: 112;
+    width: 40%;
+    max-width: 600px;
+    padding: 60px;
+    .title {
+      color: var(--text-100, #000);
+      font-family: Outfit;
+      font-size: 40px;
+      padding-bottom: 10px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    .subtitle {
+      color: var(--text-40, #a7a7a7);
+      font-family: Outfit;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      padding-bottom: 26px;
+    }
+    .form-container {
+      .top-buttons-container {
+        @include flex(row, center, start);
+        justify-content: space-between;
+        width: 100%;
+        padding-bottom: 26px;
+
+        .email-me-button {
+          width: 242px;
+          height: 57px;
+          cursor: pointer;
+          flex-shrink: 0;
+          border-radius: 57px;
+          border: 1px solid var(--Border, #dcdcdc);
+          background: var(--Foreground, #fff);
+          .email-me {
+            @include flex(row, center, start);
+            align-items: center;
+            color: var(--text-40, #a7a7a7);
+            text-align: center;
+            font-family: Outfit;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            .icon {
+              padding-right: 10px;
+              transition: fill 0.2s; /* Add a transition effect for smooth color change */
+            }
+          }
+        
+          &:active {
+            .email-me .icon {
+              fill: #ffae07; /* Change this color to the desired color when the button is active */
+            }
+          }
+        }
+        .text-me-button {
+          width: 242px;
+          height: 57px;
+          flex-shrink: 0;
+          cursor: pointer;
+          border-radius: 57px;
+          border: 1px solid var(--Primary, #ffae07);
+          background: var(--Foreground, #fff);
+          .text-me {
+            @include flex(row, center, start);
+            align-items: center;
+            text-align: center;
+            font-family: Outfit;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            background: var(
+              --Primary,
+              linear-gradient(168deg, #ffae00 -110.09%, #ffae07 118.06%)
+            );
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            .icon {
+              padding-right: 10px;
+            }
+          }
+        }
+        .email-me-button {
+          width: 242px;
+          height: 57px;
+          cursor: pointer;
+          flex-shrink: 0;
+          border-radius: 57px;
+          border: 1px solid var(--Border, #dcdcdc);
+          background: var(--Foreground, #fff);
+          .email-me {
+            @include flex(row, center, start);
+            align-items: center;
+            color: var(--text-40, #a7a7a7);
+            text-align: center;
+            font-family: Outfit;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            .icon {
+              padding-right: 10px;
+            }
+          }
+        }
+      }
+      .form-label {
+        color: var(--text-70, #6a6a6a);
+        font-family: Outfit;
+        font-size: 18px;
+        font-style: normal;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .icon-input-container {
+        @include flex(row, center, start);
+        width: 100%;
+        height: 65px !important;
+        flex-shrink: 0;
+        border-radius: 57px;
+        border: 1px solid var(--Border, #dcdcdc);
+        background: var(--Foreground, #fff);
+      }
+    }
+    .submit-button-container {
+      width: 250px;
+      height: 67px;
+      margin-left: auto;
+      margin-right: auto;
+      flex-shrink: 0;
+      margin-top: 60px;
+      border-radius: 40px;
+      box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.06);
+    }
+    .form-bottom-text {
+      color: var(--text-40, #a7a7a7);
+      text-align: center;
+      font-family: Outfit;
+      font-size: 16px;
+      padding-top: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .form-bottom-text-span {
+      color: #ffae00;
+      font-family: Outfit;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration-line: underline;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+    }
+    .recaptcha-container {
+      @include flex(row, center, start);
+      .recaptcha{
+      padding-top: 30px;
+      }
+    }
+  }
+}

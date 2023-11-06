@@ -1,0 +1,179 @@
+@import "/src/styles/mixins.scss";
+.choose-business-page {
+  @include flex(row, center, start);
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  @include hideScrollbar();
+  .choose-container {
+    width: 50%;
+    padding: 60px;
+    cursor: pointer;
+    .title {
+      color: var(--text-100, #000);
+      font-family: Outfit;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    .subtitle {
+      color: var(--text-40, #a7a7a7);
+      font-family: Outfit;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .form-list-container {
+      box-sizing: border-box;
+      overflow-y: auto;
+      overflow-x: hidden;
+      max-height: calc(60vh - 100px);
+      margin-bottom: 40px;
+      width: 100%;
+      .form-container {
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 16px;
+        background: var(--Foreground, #fff);
+        box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.06);
+        height: auto;
+        flex-shrink: 0;
+        .list-item {
+          @include flex(row, center, start);
+          justify-content: space-between;
+          align-items: center;
+          box-sizing: border-box;
+          width: 100%;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          height: auto;
+          padding-left: 20px;
+          padding-right: 20px;
+          .left-item {
+            @include flex(row, center, start);
+            .image-container {
+              img {
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+              }
+            }
+            .title-time {
+              @include flex(column, center, start);
+              padding-left: 10px;
+              .title {
+                color: var(--text-100, #000);
+                font-family: Outfit;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 150%;
+              }
+              .time {
+                color: var(--text-40, #a7a7a7);
+                font-family: Outfit;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+              }
+            }
+          }
+          .right-item {
+            box-sizing: border-box;
+            display: flex;
+            padding: 5px 14px;
+            align-items: flex-start;
+            gap: 10px;
+            border-radius: 49px;
+            background: rgba(0, 158, 6, 0.2);
+            color: var(--green-100, #009e06);
+            font-family: Outfit;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+          .right-item-review {
+            display: flex;
+            padding: 5px 14px;
+            align-items: flex-start;
+            gap: 10px;
+            border-radius: 49px;
+            background: rgba(255, 145, 15, 0.2);
+            color: #ff910f;
+            text-align: right;
+            font-family: Outfit;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
+    }
+    .no-businesses-container {
+      @include flex(column, center, center, 20px);
+      svg {
+        height: 200px;
+        width: 200px;
+      }
+      .no-businesses-text {
+        background: var(
+          --Primary,
+          linear-gradient(168deg, #ffda46 -110.09%, #ffae00 118.06%)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: Outfit;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.408px; 
+      }
+    }
+    .button-container {
+      position: relative;
+      @include hoverEffect(1.01);
+      margin-top: 10px;
+      border-radius: 16px;
+      background: var(--Foreground, #fff);
+      box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.06);
+      height: auto;
+      z-index: 111;
+      flex-shrink: 0;
+      cursor: pointer;
+      .add-button-container {
+        @include hoverEffect(1.01);
+        @include flex(row, center, center, 10px);
+        padding: 30px 0;
+        border-radius: 16px;
+        background: var(--Foreground, #fff);
+        box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.06);
+        cursor: pointer;
+        z-index: 111;
+        .text {
+          @include preventSelection();
+          background: var(
+            --Primary,
+            linear-gradient(168deg, #ffda46 -110.09%, #ffae00 118.06%)
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-family: Outfit;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: -0.408px;
+        }
+      }
+    }
+  }
+}

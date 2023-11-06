@@ -1,0 +1,167 @@
+@import "/src/styles/mixins.scss";
+
+.performance-page {
+  font-family: Outfit;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+
+  @include flex(row, center, start);
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  @include hideScrollbar();
+
+  .performance-content {
+    width: 45%;
+    max-width: 600px;
+  }
+
+  .box-container {
+    @include flex(row, start, column, 10px);
+    margin-top: 5%;
+    width: 100%;
+    height: 226px;
+    border-radius: 16px;
+    box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    .video-info {
+      margin-top: 0;
+
+      .info-header {
+        display: flex;
+        align-items: center;
+
+        .title {
+          font-family: Outfit;
+          font-size: 28px;
+          font-weight: 900;
+          line-height: 35px;
+          letter-spacing: 0em;
+          text-align: left;
+          margin-bottom: 0;
+          padding-left: 5%;
+        }
+
+        .icons {
+          fill: #ffae07;
+          display: flex;
+          align-items: center;
+          margin-left: auto;
+          padding-right: 10%;
+          cursor: pointer;
+
+          .icon {
+            width: 35px;
+            height: 35px;
+            padding: 10px;
+          }
+        }
+      }
+
+      .subheading {
+        font-family: Outfit;
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 35px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: var(--text-40, #a7a7a7);
+        padding-left: 10px;
+      }
+
+      .profile-placeholder-image {
+        width: 30px;
+        height: 30px;
+        padding-left: 5%;
+      }
+    }
+
+    .box-divider {
+      width: 80%;
+      height: 1px;
+      margin-top: 20px;
+      border: 1px solid #dcdcdc;
+      color: #dcdcdc;
+    }
+
+    .box-content {
+      @include flex(row, start, center); 
+      width: 80%;
+      margin-left: 10%;
+    
+      .rocket-icon {
+        fill: #ffae07;
+        width: 60px;
+        height: 60px;
+      }
+      .title {
+        font-size: 22px;
+        font-weight: 700;
+        text-align: left;
+      }
+    
+      .subheading {
+        font-size: 16px;
+        color: var(--text-40, #a7a7a7);
+        text-align: left;
+        margin-top: 8px;
+      }
+    
+      .button-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end; 
+        align-items: flex-end; 
+        margin-top: 10px; 
+      }
+    }
+  .content-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .box-icon {
+    fill: #ffae07;
+    width: 87px;
+    height: 87px;
+  }
+
+  .video-insights {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+
+    .insight-box {
+      border-radius: 8px;
+      text-align: center;
+      flex-grow: 1;
+
+      .insight-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .insight-number {
+          font-size: 28px;
+          font-weight: 900;
+          color: var(--text-100, #ffae07);
+          margin-top: 0;
+        }
+
+        .insight-title {
+          font-family: Outfit;
+          font-size: 18px;
+          font-weight: 700;
+          letter-spacing: 0em;
+          text-align: left;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+}
