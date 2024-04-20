@@ -1,3 +1,6 @@
+# Piq Business Web App Introduction
+It is a client-based business project developed using React.js, Redux, and Material-UI (MUI) for the frontend, with REST API integration. The application focused on showcasing cooking videos of various types of food from different restaurants. These videos were shared on Instagram and Facebook, targeting users based on their location. The goal was to attract consumers to the restaurants by showcasing their culinary offerings through engaging social media content. By providing on-demand access to these videos, the project aimed to increase the visibility and efficiency of restaurant businesses.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
